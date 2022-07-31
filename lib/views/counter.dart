@@ -1,4 +1,5 @@
 import 'package:blocestudo/bloc/bloc_counter.dart';
+import 'package:blocestudo/bloc/counter_event.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
