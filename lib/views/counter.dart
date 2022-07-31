@@ -1,5 +1,6 @@
 import 'package:blocestudo/bloc/counter_book.dart';
 import 'package:blocestudo/bloc/counter_event.dart';
+import 'package:blocestudo/bloc/counter_pen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -118,7 +119,7 @@ class CounterView extends StatelessWidget {
                           color: Colors.redAccent,
                         ),
                         child: IconButton(
-                          onPressed: () => {},
+                          onPressed: () {},
                           icon: Icon(
                             Icons.remove,
                             color: Colors.white,
@@ -128,10 +129,12 @@ class CounterView extends StatelessWidget {
                       SizedBox(
                         width: 20,
                       ),
-                      Text(
-                        "0",
-                        style: TextStyle(fontSize: 30),
-                      ),
+                      BlocBuilder<CounterPen, int>(builder: (context, state) {
+                        return Text(
+                          "$state",
+                          style: TextStyle(fontSize: 30),
+                        );
+                      }),
                       SizedBox(
                         width: 20,
                       ),
