@@ -52,9 +52,9 @@ class CounterView extends StatelessWidget {
                           color: Colors.redAccent,
                         ),
                         child: IconButton(
-                          onPressed: () {},
+                          onPressed: () => {},
                           icon: Icon(
-                            Icons.add,
+                            Icons.remove,
                             color: Colors.white,
                           ),
                         ),
@@ -77,9 +77,66 @@ class CounterView extends StatelessWidget {
                           color: Colors.redAccent,
                         ),
                         child: IconButton(
+                          onPressed: () {},
+                          icon: Icon(
+                            Icons.add,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 30,
+                  ),
+                  Row(
+                    children: [
+                      Text(
+                        "Pens",
+                        style: TextStyle(
+                          fontSize: 30,
+                          color: Colors.lime,
+                        ),
+                      ),
+                      Expanded(
+                        child: Container(),
+                      ),
+                      Container(
+                        width: 50,
+                        height: 50,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(25),
+                          color: Colors.redAccent,
+                        ),
+                        child: IconButton(
                           onPressed: () => {},
                           icon: Icon(
                             Icons.remove,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Text(
+                        "0",
+                        style: TextStyle(fontSize: 30),
+                      ),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Container(
+                        width: 50,
+                        height: 50,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(25),
+                          color: Colors.redAccent,
+                        ),
+                        child: IconButton(
+                          onPressed: () {},
+                          icon: Icon(
+                            Icons.add,
                             color: Colors.white,
                           ),
                         ),
