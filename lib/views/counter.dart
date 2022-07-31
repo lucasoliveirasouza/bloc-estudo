@@ -119,7 +119,9 @@ class CounterView extends StatelessWidget {
                           color: Colors.redAccent,
                         ),
                         child: IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            context.read<CounterPen>().add(decrement());
+                          },
                           icon: Icon(
                             Icons.remove,
                             color: Colors.white,
@@ -146,7 +148,9 @@ class CounterView extends StatelessWidget {
                           color: Colors.redAccent,
                         ),
                         child: IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            context.read<CounterPen>().add(increment());
+                          },
                           icon: Icon(
                             Icons.add,
                             color: Colors.white,
