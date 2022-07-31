@@ -1,6 +1,7 @@
 import 'package:blocestudo/bloc/counter_book.dart';
 import 'package:blocestudo/bloc/counter_event.dart';
 import 'package:blocestudo/bloc/counter_pen.dart';
+import 'package:blocestudo/views/components/rounded_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -159,6 +160,17 @@ class CounterView extends StatelessWidget {
                       ),
                     ],
                   ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Container(),
+                      ),
+                      RoundedButton(title: "Total", onTap: () {})
+                    ],
+                  )
                 ],
               ),
             ),
