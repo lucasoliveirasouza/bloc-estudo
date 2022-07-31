@@ -14,7 +14,7 @@ class CounterView extends StatelessWidget {
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(50),
               ),
-              color: Colors.blue.shade200,
+              color: Colors.purple.shade100,
             ),
             child: Center(
               child: Text(
@@ -26,6 +26,7 @@ class CounterView extends StatelessWidget {
               ),
             ),
           ),
+          Expanded(child: Container())
         ],
       ),
     );
