@@ -168,7 +168,7 @@ class CounterView extends StatelessWidget {
                       Expanded(
                         child: Container(),
                       ),
-                      RoundedButton(title: "Total", onTap: () {})
+                      RoundedButton(title: "Total", onPressed: () {})
                     ],
                   )
                 ],
