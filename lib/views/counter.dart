@@ -54,7 +54,9 @@ class CounterView extends StatelessWidget {
                           color: Colors.redAccent,
                         ),
                         child: IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            context.read<CounterBloc>().add(decrement());
+                          },
                           icon: Icon(
                             Icons.remove,
                             color: Colors.white,
