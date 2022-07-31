@@ -1,4 +1,6 @@
+import 'package:blocestudo/bloc/bloc_counter.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class CounterView extends StatelessWidget {
   const CounterView({Key? key}) : super(key: key);
@@ -52,7 +54,7 @@ class CounterView extends StatelessWidget {
                           color: Colors.redAccent,
                         ),
                         child: IconButton(
-                          onPressed: () => {},
+                          onPressed: () {},
                           icon: Icon(
                             Icons.remove,
                             color: Colors.white,
@@ -62,10 +64,12 @@ class CounterView extends StatelessWidget {
                       SizedBox(
                         width: 20,
                       ),
-                      Text(
-                        "0",
-                        style: TextStyle(fontSize: 30),
-                      ),
+                      BlocBuilder<CounterBloc, int>(builder: (context, state) {
+                        return Text(
+                          "$state",
+                          style: TextStyle(fontSize: 30),
+                        );
+                      }),
                       SizedBox(
                         width: 20,
                       ),
@@ -77,7 +81,9 @@ class CounterView extends StatelessWidget {
                           color: Colors.redAccent,
                         ),
                         child: IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            context.read<CounterBloc>().add(increment());
+                          },
                           icon: Icon(
                             Icons.add,
                             color: Colors.white,
