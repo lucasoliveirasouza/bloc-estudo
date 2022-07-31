@@ -1,4 +1,4 @@
-import 'package:blocestudo/bloc/bloc_counter.dart';
+import 'package:blocestudo/bloc/counter_book.dart';
 import 'package:blocestudo/bloc/counter_event.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -56,7 +56,7 @@ class CounterView extends StatelessWidget {
                         ),
                         child: IconButton(
                           onPressed: () {
-                            context.read<CounterBloc>().add(decrement());
+                            context.read<CounterBook>().add(decrement());
                           },
                           icon: Icon(
                             Icons.remove,
@@ -67,7 +67,7 @@ class CounterView extends StatelessWidget {
                       SizedBox(
                         width: 20,
                       ),
-                      BlocBuilder<CounterBloc, int>(builder: (context, state) {
+                      BlocBuilder<CounterBook, int>(builder: (context, state) {
                         return Text(
                           "$state",
                           style: TextStyle(fontSize: 30),
@@ -85,7 +85,7 @@ class CounterView extends StatelessWidget {
                         ),
                         child: IconButton(
                           onPressed: () {
-                            context.read<CounterBloc>().add(increment());
+                            context.read<CounterBook>().add(increment());
                           },
                           icon: Icon(
                             Icons.add,
