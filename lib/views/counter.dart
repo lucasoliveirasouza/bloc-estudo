@@ -49,7 +49,7 @@ class CounterView extends StatelessWidget {
                         height: 50,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(25),
-                          color: Colors.purple.shade800,
+                          color: Colors.redAccent,
                         ),
                         child: IconButton(
                           onPressed: () {},
