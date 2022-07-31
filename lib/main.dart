@@ -1,13 +1,18 @@
-import 'package:blocestudo/bloc/bloc_counter.dart';
+import 'package:blocestudo/bloc/counter_book.dart';
 import 'package:blocestudo/views/counter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import 'bloc/counter_pen.dart';
+
 void main() {
   runApp(MultiBlocProvider(
     providers: [
-      BlocProvider<CounterBloc>(
-        create: (BuildContext context) => CounterBloc(),
+      BlocProvider<CounterBook>(
+        create: (BuildContext context) => CounterBook(),
+      ),
+      BlocProvider<CounterPen>(
+        create: (BuildContext context) => CounterPen(),
       ),
     ],
     child: MyApp(),
