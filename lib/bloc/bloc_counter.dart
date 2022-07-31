@@ -7,10 +7,8 @@ class increment extends CounterEvent {}
 class decrement extends CounterEvent {}
 
 class CounterBloc extends Bloc<CounterEvent, int> {
-  int books = 0;
-
   CounterBloc() : super(0) {
-    on<increment>((event, emit) => emit(books + 1));
-    on<decrement>((event, emit) => emit(books - 1));
+    on<increment>((event, emit) => emit(state + 1));
+    on<decrement>((event, emit) => emit(state - 1));
   }
 }
