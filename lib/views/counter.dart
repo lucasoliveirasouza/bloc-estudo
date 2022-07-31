@@ -31,6 +31,9 @@ class CounterView extends StatelessWidget {
               padding: EdgeInsets.all(30),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Row(),
+                ],
               ),
             ),
           ),
