@@ -2,6 +2,7 @@ import 'package:blocestudo/bloc/counter_book.dart';
 import 'package:blocestudo/views/counter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:get/get.dart';
 
 import 'bloc/counter_pen.dart';
 
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: "Counter",
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
