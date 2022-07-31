@@ -26,7 +26,14 @@ class CounterView extends StatelessWidget {
               ),
             ),
           ),
-          Expanded(child: Container())
+          Expanded(
+            child: Container(
+              padding: EdgeInsets.all(30),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+              ),
+            ),
+          ),
         ],
       ),
     );
