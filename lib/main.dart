@@ -1,8 +1,17 @@
+import 'package:blocestudo/bloc/bloc_counter.dart';
 import 'package:blocestudo/views/counter.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MultiBlocProvider(
+    providers: [
+      BlocProvider<CounterBloc>(
+        create: (BuildContext context) => CounterBloc(),
+      ),
+    ],
+    child: MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
