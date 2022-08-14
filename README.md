@@ -13,7 +13,7 @@
 <img align="center" title="Dart" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/dart/dart-original.svg">  <img align="center" title="Flutter" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/flutter/flutter-original.svg">
 
 #### Descrição:
-Estudo do gerenciamento de estados utilizando Bloc.
+Estudo do gerenciamento de estados utilizando Bloc
 
 #### O Aplicativo:
 
